@@ -268,7 +268,7 @@ if page == 'Green Roof':
             
             fig2 = make_subplots()
             fig2.add_trace(
-                go.Scatter(x=pp_solutions_fitnesses[:, 0], y=pp_solutions_fitnesses[:, 1],name='Pareto-Optimal Line' ,line=dict(color='royalblue', width=2),mode='lines+markers')
+                go.Scatter(x=pp_solutions_fitnesses[:, 2], y=pp_solutions_fitnesses[:, 3],name='Pareto-Optimal Line' ,line=dict(color='royalblue', width=2),mode='lines+markers')
                 )
             fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                           dash='dash'))
