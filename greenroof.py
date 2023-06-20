@@ -229,7 +229,7 @@ if page == 'Green Roof':
         def simple_1d_fitness_func(p1,p2):
             objective_1 = 9881*(p1*p2)**0.267 
             objective_2 = (98-(117*(2.718)**(-5.21*(p2))))
-            return np.stack([objective_1,objective_2],axis=1)
+            return np.stack([p1,p2,objective_1,objective_2],axis=1)
         config = {
             "half_pop_size" : 100,
             "problem_dim" : 2,
