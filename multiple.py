@@ -9,6 +9,7 @@ import streamlit as st
 import functools
 import pandas as pd
 import numpy as np
+from plotly.subplots import make_subplots
 import plotly.express as px
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
@@ -261,7 +262,7 @@ if page == 'Single':
                     xdata= pp_solutions_fitnesses[:,3]
                     ydata= pp_solutions_fitnesses[:,2]
                     def Gauss(x, A,B,C):
-                        y = A*x + B*x**2 + C
+                        y = A*x +B*x**2 + C
                         return y
     
     
@@ -269,15 +270,30 @@ if page == 'Single':
                     fit_A = parameters[0]
                     fit_B = parameters[1]
                     fit_C= parameters[2]
-                    cost = fit_A*removal +fit_B*removal**2 + fit_C
+                    
+                    cost = fit_A*removal+fit_B*removal**2+fit_C
                     df= pd.DataFrame(pp_solutions_fitnesses,columns=["Area","depth","cost","Reduction"])    
                     with tab1:
+                        
                         fig1 = px.line(df, x="cost", y="Reduction")
                         fig2 = px.scatter(df, x="cost", y="Reduction", color='Area',color_continuous_scale=px.colors.sequential.Bluered)
                         fig3 = go.Figure(data=fig1.data + fig2.data)
                         fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
                         fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                        fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                         fig2.update_layout(height=600, width=800,  
                               
                          showlegend=True,
@@ -346,44 +362,56 @@ if page == 'Single':
                                 "gene_max_val" : 1,
                                 "mutation_power_ratio" : 0.05,
                                 }
-
                             pop = np.random.uniform(config["gene_min_val"],config["gene_max_val"],2*config["half_pop_size"])
 
                             mean_fitnesses = []
                             for generation in range(10):
-                                # evaluate pop 
+                                # evaluate pop
                                 fitnesses = simple_1d_fitness_func(pop,pop)
                                 mean_fitnesses.append(np.mean(fitnesses,axis=0))
                         
                                 # transition to next generation
                                 pop = NSGA2_create_next_generation(pop,fitnesses,config)
-                        
                             p1 = np.linspace(100,number,100)
                             p2= np.linspace(0.1,0.5,100)
                             pp_solutions_fitnesses = simple_1d_fitness_func(p1,p2)
                             xdata= pp_solutions_fitnesses[:,3]
                             ydata= pp_solutions_fitnesses[:,2]
                             def Gauss(x, A,B,C):
-                                y = A*x + B*x**2 + C
+                                y = A*x +B*x**2 + C
                                 return y
-                              
-                        
-    
+                                
+
+      
     
                             parameters, covariance = curve_fit(Gauss, xdata, ydata)
                             fit_A = parameters[0]
                             fit_B = parameters[1]
-                            fit_C= parameters[2]
-                            cost = fit_A*removal +fit_B*removal**2 + fit_C                            
+                            fit_C = parameters[2]
+                            
+                            cost = (fit_A*removal + fit_B*removal**2 + fit_C)                            
                             df= pd.DataFrame(pp_solutions_fitnesses,columns=["Area","depth","cost","Reduction"])    
                             with tab1:
-                                fig1 = px.line(df, x="cost", y="Reduction")
-                                fig2 = px.scatter(df, x="cost", y="Reduction", color='Area',color_continuous_scale=px.colors.sequential.Bluered)
-                                fig3 = go.Figure(data=fig1.data + fig2.data)
-                                fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
+                              fig1 = px.line(df, x="cost", y="Reduction")
+                              fig2 = px.scatter(df, x="cost", y="Reduction", color='Area',color_continuous_scale=px.colors.sequential.Bluered)
+                              fig3 = go.Figure(data=fig1.data + fig2.data)
+                              fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
-                                fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
-                                fig2.update_layout(height=600, width=800,  
+                              fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                              fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
+                              fig2.update_layout(height=600, width=800,  
                               
                                 showlegend=True,
                                 xaxis_title='Cost (USD)',yaxis_title='Nutrient Reduction (%)',
@@ -424,12 +452,17 @@ if page == 'Single':
                                          size=12,
                                          color='black',
                                          )))
-                                st.plotly_chart(fig2, use_container_width=True)
+                            st.plotly_chart(fig2, use_container_width=True)
                                 
-                                with st.expander("See explanation"):
-                                    st.write("for"+ str(removal) +"% nutrient removal, the total cost will be USD"+ str(cost))
-                                with tab2:
-                                    st.dataframe(df)
+                            with st.expander("See explanation"):
+                              st.write("for"+ str(removal) +"% nutrient removal, the total cost will be USD"+ str(-cost))
+                        with tab2:
+                            st.dataframe(df)
+                        
+                        
+                        
+                    
+                    
         elif SCM_type=='Grassed Swale':
                     number = st.number_input('Available Roof Area(sft)')
                     removal = st.slider('Required Nutrient Reduction', 0.0, 100.0, 0.5)
@@ -470,7 +503,7 @@ if page == 'Single':
                             xdata= pp_solutions_fitnesses[:,3]
                             ydata= pp_solutions_fitnesses[:,2]
                             def Gauss(x, A,B,C):
-                                y = A*x + B*x**2 + C
+                                y = A*x +B*x**2 + C
                                 return y
                               
                         
@@ -479,8 +512,9 @@ if page == 'Single':
                             parameters, covariance = curve_fit(Gauss, xdata, ydata)
                             fit_A = parameters[0]
                             fit_B = parameters[1]
-                            fit_C= parameters[2]
-                            cost = fit_A*removal +fit_B*removal**2 + fit_C
+                            fit_C = parameters[2]
+                            
+                            cost = fit_A*removal + fit_B*removal**2 + fit_C
                             df= pd.DataFrame(pp_solutions_fitnesses,columns=["Area","depth","cost","Reduction"])    
                             with tab1:
                                 fig1 = px.line(df, x="cost", y="Reduction")
@@ -489,6 +523,19 @@ if page == 'Single':
                                 fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
                                 fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                                fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                                 fig2.update_layout(height=600, width=800,  
                               
                                 showlegend=True,
@@ -699,6 +746,19 @@ if page == 'Single':
                                 fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
                                 fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                                fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                                 fig2.update_layout(height=600, width=800,  
                               
                                 showlegend=True,
@@ -796,7 +856,7 @@ if page == 'Single':
                             fit_A = parameters[0]
                             fit_B = parameters[1]
                             fit_C= parameters[2]
-                            cost = fit_A*removal +fit_B*removal**2 + fit_C                            
+                            cost = round(fit_A*removal +fit_B*removal**2 + fit_C,2)                            
                             df= pd.DataFrame(pp_solutions_fitnesses,columns=["Area","depth","cost","Reduction"])    
                             with tab1:
                                 fig1 = px.line(df, x="cost", y="Reduction")
@@ -805,6 +865,19 @@ if page == 'Single':
                                 fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
                                 fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                                fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                                 fig2.update_layout(height=600, width=800,  
                               
                                 showlegend=True,
@@ -855,14 +928,15 @@ if page == 'Single':
                                     
         elif SCM_type=='Vegetative Filter Bed':
                     number = st.number_input('Available Roof Area(sft)')
-                    removal = st.slider('Required Nutrient Reduction', 0.0, 100.0, 0.5)
+                    removal_n = st.slider('Required Total Nitrogene Reduction', 0.0, 100.0, 0.5)
+                    removal_p = st.slider('Required Total Phosphorus Reduction', 0.0, 100.0, 0.5)
                     con_level = st.slider('Confidence interval', 0.0, 25.0)
-                    st.write(removal, '% Nutrient Reduction is needed')
+                    
                     q=st.button('Run')
                     if q:
                         with col2:
                             st.subheader("Optimal Outcomes for Vegetative Filter Bed")
-                            tab1,tab2 = st.tabs(["graph","table"])
+                            tab1,tab2,tab3 = st.tabs(["graph","Nitrogene Reduction","Phosphorus Reduction"])
                             def simple_1d_fitness_func_tp(p1,p2):
                                 objective_1 = 687.5*(p1*p2)**0.59 
                                 objective_2 = (584.706*(p2)**0.012)-560.448
@@ -901,8 +975,10 @@ if page == 'Single':
                             p2= np.linspace(0.1,0.5,100)
                             pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                             pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
-                            xdata= pp_solutions_fitnesses[:,3]
-                            ydata= pp_solutions_fitnesses[:,2]
+                            x1data= pp_solutions_fitnesses_tn[:,3]
+                            y1data= pp_solutions_fitnesses_tn[:,2]
+                            x2data= pp_solutions_fitnesses_tp[:,3]
+                            y2data= pp_solutions_fitnesses_tp[:,2]
                             def Gauss(x, A,B,C):
                                 y = A*x + B*x**2 + C
                                 return y
@@ -910,21 +986,44 @@ if page == 'Single':
                         
     
     
-                            parameters, covariance = curve_fit(Gauss, xdata, ydata)
-                            fit_A = parameters[0]
-                            fit_B = parameters[1]
-                            fit_C= parameters[2]
-                            cost = fit_A*removal +fit_B*removal**2 + fit_C                            
+                            parameters1, covariance1 = curve_fit(Gauss, x1data, y1data)
+                            fit_A1 = parameters1[0]
+                            fit_B1 = parameters1[1]
+                            fit_C1= parameters1[2]
+                            cost1 = fit_A1*removal_n +fit_B1*removal_n**2 + fit_C1 
+                            parameters2, covariance2 = curve_fit(Gauss, x2data, y2data)
+                            fit_A2 = parameters2[0]
+                            fit_B2 = parameters2[1]
+                            fit_C2= parameters2[2]
+                            cost2 = fit_A2*removal_p +fit_B2*removal_p**2 + fit_C2
                             df1= pd.DataFrame(pp_solutions_fitnesses_tn,columns=["Area","depth","cost","Reduction"])  
                             df2= pd.DataFrame(pp_solutions_fitnesses_tp,columns=["Area","depth","cost","Reduction"])
                             with tab1:
-                                fig1 = px.line(df1, x="cost", y="Reduction")
-                                fig2 = px.scatter(df1, x="cost", y="Reduction", color='Area',color_continuous_scale=px.colors.sequential.Bluered)
-                                fig2.px.scatter(df2, x="cost", y="Reduction", color='Area',color_continuous_scale=px.colors.sequential.Viridis)
-                                fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
+                                
+                                #fig1 = px.line(df1, x="cost", y="Reduction")
+                                fig1=px.scatter(df1, x="cost", y="Reduction")
+                                fig2=px.scatter(df2,x="cost", y="Reduction")
+                                fig3=go.Figure(data=fig1.data + fig2.data)
+                                fig3.add_hline(y=removal_n,name= 'Nitrogene Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
-                                fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
-                                fig2.update_layout(height=600, width=800,  
+                                fig3.add_hline(y=removal_p,name= 'Phosphorus Reduction level',line=dict(color='green', width=2,
+                                                      dash='dash'))
+                                fig3.add_hrect(y0=removal_n-con_level, y1=removal_n + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                                fig3.add_hrect(y0=removal_p-con_level, y1=removal_p + con_level, line_width=0, fillcolor="green", opacity=0.2)
+                                fig3.add_annotation(
+                                    text='Total Nutrient Reduction = '+str(removal_n)+' % <br> Total Cost = $'+str(cost1)+'<br>Total Phosphorus Reduction = '+str(removal_p)+' % <br> Total Cost = $'+str(cost2),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
+                                fig3.update_layout(height=600, width=800,  
                               
                                 showlegend=True,
                                 xaxis_title='Cost (USD)',yaxis_title='Nutrient Reduction (%)',
@@ -965,12 +1064,14 @@ if page == 'Single':
                                          size=12,
                                          color='black',
                                          )))
-                                st.plotly_chart(fig2, use_container_width=True)
+                                st.plotly_chart(fig3, use_container_width=True)
                             
                                 with st.expander("See explanation"):
                                     st.write("The figure above shows total life cycle cost of the implementation of the SCM with respect to the reduction of nutrients")
                                 with tab2:
                                     st.dataframe(df1)
+                                with tab3:
+                                    st.dataframe(df2)
 
         else:
                     number = st.number_input('Available Roof Area(sft)')
@@ -1017,20 +1118,23 @@ if page == 'Single':
                             p2= np.linspace(0.1,0.5,100)
                             pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                             pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
-                            xdata= pp_solutions_fitnesses[:,3]
-                            ydata= pp_solutions_fitnesses[:,2]
+                            x1data= pp_solutions_fitnesses_tn[:,3]
+                            y1data= pp_solutions_fitnesses_tn[:,2]
+                            x2data= pp_solutions_fitnesses_tp[:,3]
+                            y2data= pp_solutions_fitnesses_tp[:,2]
                             def Gauss(x, A,B,C):
                                 y = A*x + B*x**2 + C
                                 return y
-                              
-                        
-    
-    
-                            parameters, covariance = curve_fit(Gauss, xdata, ydata)
-                            fit_A = parameters[0]
-                            fit_B = parameters[1]
-                            fit_C= parameters[2]
-                            cost = fit_A*removal +fit_B*removal**2 + fit_C                            
+                            parameters1, covariance1 = curve_fit(Gauss, x1data, y1data)
+                            fit_A1 = parameters1[0]
+                            fit_B1 = parameters1[1]
+                            fit_C1= parameters1[2]
+                            cost1 = fit_A1*removal_n +fit_B1*removal_n**2 + fit_C1 
+                            parameters2, covariance2 = curve_fit(Gauss, x2data, y2data)
+                            fit_A2 = parameters2[0]
+                            fit_B2 = parameters2[1]
+                            fit_C2= parameters2[2]
+                            cost2 = fit_A2*removal_p +fit_B2*removal_p**2 + fit_C2
                             df1= pd.DataFrame(pp_solutions_fitnesses_tn,columns=["Area","depth","cost","Reduction"])  
                             df2= pd.DataFrame(pp_solutions_fitnesses_tp,columns=["Area","depth","cost","Reduction"])
                             with tab1:
@@ -1157,7 +1261,21 @@ else:
                         fig2 = px.scatter(df, x="Cost", y="Reduction", color='Area of Bioretention',color_continuous_scale=px.colors.sequential.Bluered)
                         fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
+                        
                         fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                        fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                         fig2.update_layout(height=600, width=800,  
                           
                          showlegend=True,
@@ -1266,6 +1384,19 @@ else:
                             fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                        dash='dash'))
                             fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                            fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                             fig2.update_layout(height=600, width=800,  
                            
                             showlegend=True,
@@ -1374,6 +1505,19 @@ else:
                             fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                        dash='dash'))
                             fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                            fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                             fig2.update_layout(height=600, width=800,  
                            
                             showlegend=True,
@@ -1482,6 +1626,19 @@ else:
                             fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                        dash='dash'))
                             fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                            fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                             fig2.update_layout(height=600, width=800,  
                            
                             showlegend=True,
@@ -1590,6 +1747,19 @@ else:
                             fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                        dash='dash'))
                             fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                            fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                             fig2.update_layout(height=600, width=800,  
                            
                             showlegend=True,
@@ -1809,6 +1979,19 @@ else:
                             fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                        dash='dash'))
                             fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                            fig2.add_annotation(
+                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost),
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(127,205,187)',
+                                    y=1,
+                                    x=0,
+                                    xanchor='left')
                             fig2.update_layout(height=600, width=800,  
                            
                             showlegend=True,
