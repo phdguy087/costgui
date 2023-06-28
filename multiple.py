@@ -247,7 +247,7 @@ if page == 'Single':
                     pop = np.random.uniform(config["gene_min_val"],config["gene_max_val"],2*config["half_pop_size"])
 
                     mean_fitnesses = []
-                    for generation in range(10):
+                    for generation in range(30):
                         
                         # evaluate pop
                         fitnesses = simple_1d_fitness_func(pop,pop)
@@ -271,7 +271,7 @@ if page == 'Single':
                     fit_B = parameters[1]
                     fit_C= parameters[2]
                     
-                    cost = fit_A*removal+fit_B*removal**2+fit_C
+                    cost = round(fit_A*removal+fit_B*removal**2+fit_C,2)
                     df= pd.DataFrame(pp_solutions_fitnesses,columns=["Area","depth","cost","Reduction"])    
                     with tab1:
                         
@@ -307,7 +307,7 @@ if page == 'Single':
                              showgrid=False,
                              showticklabels=True,
                              linecolor='black',
-                             title='Cost(USD)',
+                             title='Cost (USD)',
                              titlefont=dict(
                                  family='Arial',
                                  size = 25,
@@ -319,7 +319,7 @@ if page == 'Single':
                                  size=20,
                                  color='black',
                                  )),yaxis=dict(
-                                     title='Nutrient Reduction(%)',
+                                     title='Nutrient Reduction (%)',
                                      titlefont=dict(
                                  family='Arial',
                                  size = 25,
@@ -337,8 +337,7 @@ if page == 'Single':
                                          )))
                         st.plotly_chart(fig2, use_container_width=True)
                         text="for"+ str(removal) +"% nutrient removal, the total cost will be USD"+ str(cost)   
-                        with st.expander("See explanation"):
-                                st.write(text)
+                        
                     with tab2:
                         st.dataframe(df)
         elif SCM_type=='Dry Pond':
@@ -1446,8 +1445,8 @@ else:
                             with tab2: 
                                 st.dataframe(df)
         elif SCM_type=='Bioretention & Porous Pavement':
-                number1 = st.number_input('Available Roof Area(sft)')
-                number2 = st.number_input('Available  Area(sft)')
+                number1 = st.number_input('Available  Area for Bioretention (sft)')
+                number2 = st.number_input('Available  Area for Porous Pavement (sft)')
                 removal = st.slider('Required Nutrient Reduction', 0.0, 100.0, 0.5)
                 con_level = st.slider('Confidence interval', 0.0, 25.0)
                 st.write(removal, '% Nutrient Reduction is needed')
@@ -1461,7 +1460,7 @@ else:
                             objective_2 = ((98-(117*(2.718)**(-5.3*(p2))))/100)*((98-(117*(2.718)**(-5.21*(p5))))/100)*100
                             return np.stack([p1,p2,p3,p4,p5,p6,objective_1,objective_2],axis=1)
                         config = {
-                         "half_pop_size" : 100,
+                         "half_pop_size" : 50,
                          "problem_dim" : 2,
                          "gene_min_val" : -1,
                          "gene_max_val" : 1,
@@ -1497,8 +1496,8 @@ else:
                         fit_A = parameters[0]
                         fit_B = parameters[1]
                         fit_C= parameters[2]
-                        cost = fit_A*removal +fit_B*removal**2 + fit_C
-                        df= pd.DataFrame(pp_solutions_fitnesses,columns=["Area of Bioretention","Depth of Bioretention","Percentage1","Area of Green Roof","Depth of Green Roof","Percentage2","Cost","Reduction"])
+                        cost = round(fit_A*removal +fit_B*removal**2 + fit_C,2)
+                        df= pd.DataFrame(pp_solutions_fitnesses,columns=["Area of Bioretention","Depth of Bioretention","Percentage1","Area of Porous Pavement","Depth of Porous Pavement","Percentage2","Cost","Reduction"])
                         with tab1:
                             fig1 = px.line(df, x="Cost", y="Reduction")
                             fig2 = px.scatter(df, x="Cost", y="Reduction", color='Area of Bioretention',color_continuous_scale=px.colors.sequential.Bluered)
@@ -1527,7 +1526,7 @@ else:
                               size=18,
                               color="Black"),
                           xaxis=dict(
-                              title='Cost(USD)',
+                              title='Cost (USD)',
                                            titlefont=dict(
                                            family='Arial',
                                            size = 25,
@@ -1561,8 +1560,7 @@ else:
                                           )))
                             st.plotly_chart(fig2, use_container_width=True)
 
-                            with st.expander("See explanation"):
-                                st.write("for"+ str(removal) +"% nutrient removal, the total cost will be USD"+ str(cost))
+                           
                     
                             with tab2: 
                                 st.dataframe(df)
