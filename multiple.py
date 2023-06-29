@@ -210,7 +210,7 @@ def NSGA2_create_next_generation(pop,fitnesses,config):
     return new_pop
 
 st.set_page_config(layout="wide")
-st.title("SCM PLANNING TOOL")
+st.title("iPlan-GreenS2: Integrated Planning Toolkit for Green Infrastructure Siting and Selection")
 
 add_selectbox1 = st.sidebar.title("OPTIONS")
 with st.sidebar:
