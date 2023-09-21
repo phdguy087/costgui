@@ -337,7 +337,7 @@ if page == 'Single':
                         x= pp_solutions_fitnesses[:,2]
                         y= pp_solutions_fitnesses[:,2]* tn
                         y2 = pp_solutions_fitnesses[:,2]* tp
-                        fig1 = px.line(x, y)
+                        fig1 = px.scatter(x, y)
                         st.plotly_chart(fig1, use_container_width=True)
                     with tab3:
                         fig = go.Figure()
