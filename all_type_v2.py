@@ -337,9 +337,10 @@ if page == 'Single':
                     with tab4:
                         x= pp_solutions_fitnesses[:,2]
                         y= pp_solutions_fitnesses[:,3]* tn
+                        fig, ax = plt.subplots()
                         y2 = pp_solutions_fitnesses[:,3]* tp
-                        fig1 = plt.plot(x, y)
-                        st.pyplot(fig1, use_container_width=True)
+                        ax.plot(x, y)
+                        st.pyplot(fig)
                     with tab3:
                         fig = go.Figure()
                         fig.add_trace(go.Bar(
