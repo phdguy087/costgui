@@ -220,7 +220,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3,tab4 = st.tabs(["graph","table","Cost","newplot"])
                     def simple_1d_fitness_func(p1,p2):
                         objective_1 = 29631*(p1*p2)**0.026 
                         objective_2 = (98-(117.1*(2.718)**(-5.21*(p2))))
@@ -333,7 +333,12 @@ if page == 'Single':
                         
                     with tab2:
                         st.dataframe(df)
-                        
+                    with tab4:
+                        x= pp_solutions_fitnesses[:,2]
+                        y= pp_solutions_fitnesses[:,2]* tn
+                        y2 = pp_solutions_fitnesses[:,2]* tp
+                        fig1 = px.line(x, y)
+                        st.plotly_chart(fig1, use_container_width=True)
                     with tab3:
                         fig = go.Figure()
                         fig.add_trace(go.Bar(
