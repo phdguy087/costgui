@@ -335,8 +335,8 @@ if page == 'Single':
                         st.dataframe(df)
                     with tab4:
                         x= pp_solutions_fitnesses[:,2]
-                        y= pp_solutions_fitnesses[:,2]* tn
-                        y2 = pp_solutions_fitnesses[:,2]* tp
+                        y= pp_solutions_fitnesses[:,3]* tn
+                        y2 = pp_solutions_fitnesses[:,3]* tp
                         fig1 = px.scatter(x, y)
                         st.plotly_chart(fig1, use_container_width=True)
                     with tab3:
