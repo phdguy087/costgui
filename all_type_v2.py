@@ -339,7 +339,7 @@ if page == 'Single':
                         y= pp_solutions_fitnesses[:,3]* tn
                         y2 = pp_solutions_fitnesses[:,3]* tp
                         fig1 = plt.plot(x, y)
-                        st.plotly_chart(fig1, use_container_width=True)
+                        st.pyplot(fig1, use_container_width=True)
                     with tab3:
                         fig = go.Figure()
                         fig.add_trace(go.Bar(
