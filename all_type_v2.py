@@ -336,7 +336,7 @@ if page == 'Single':
                         st.dataframe(df)
                     with tab4:
                         x= pp_solutions_fitnesses[:,2]
-                        y= tn-pp_solutions_fitnesses[:,3]* tn
+                        y= tn - (pp_solutions_fitnesses[:,3]/100) *tn
                         fig, ax = plt.subplots()
                         y2 = pp_solutions_fitnesses[:,3]* tp
                         ax.plot(x, y)
