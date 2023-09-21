@@ -9,6 +9,7 @@ import streamlit as st
 import functools
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 from plotly.subplots import make_subplots
 import plotly.express as px
 from plotly.subplots import make_subplots
@@ -337,7 +338,7 @@ if page == 'Single':
                         x= pp_solutions_fitnesses[:,2]
                         y= pp_solutions_fitnesses[:,3]* tn
                         y2 = pp_solutions_fitnesses[:,3]* tp
-                        fig1 = px.scatter(x, y)
+                        fig1 = plt.plot(x, y)
                         st.plotly_chart(fig1, use_container_width=True)
                     with tab3:
                         fig = go.Figure()
