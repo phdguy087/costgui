@@ -197,7 +197,7 @@ def NSGA2_create_next_generation(pop,fitnesses,config):
 
 #Development of the UI
 st.set_page_config(layout="wide")
-st.title("iPlanGreenSS: Integrated Planning toolkit for Green Infrastructure Siting and Selection")
+st.title("iPlantGreenS\u00b2 : Integrated Planning toolkit for Green Infrastructure Siting and Selection")
 
 add_selectbox1 = st.sidebar.title("OPTIONS")
 with st.sidebar:
