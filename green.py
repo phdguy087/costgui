@@ -210,7 +210,7 @@ if page == 'Single':
         options1=['Green Roof','Rain Barrel','Cistern']
         SCM_type= st.selectbox('Type of SCM:',options1)
         if SCM_type=='Green Roof':
-            number = st.number_input('Available Area(sft)')
+            number1 = st.number_input('Available Area(sft)')
             tn= st.number_input('Initial Total Nitrogene Concentration (lb)')
             tp= st.number_input('Initial Total Phosphorus Concentration (lb)')
             removal = st.slider('Required Nutrient Reduction', 0.0, 100.0, 0.5)
@@ -244,7 +244,7 @@ if page == 'Single':
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses,config)
                    
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses = simple_1d_fitness_func(p1,p2)
                     xdata= pp_solutions_fitnesses[:,3]
