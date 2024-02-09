@@ -2284,7 +2284,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Vegetative Filter Bed")
-                    tab1,tab2,tab3= st.tabs(["graph,"Table","Cost"])
+                    tab1,tab2,tab3= st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2):
                         objective_1 = 687.5*(p1*p2)**0.59 
                         objective_2 = (584.706*(p2)**0.012)-560.448
