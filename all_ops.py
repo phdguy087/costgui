@@ -6290,10 +6290,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -6777,10 +6777,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -7263,10 +7263,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -8544,10 +8544,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -9031,10 +9031,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -9518,10 +9518,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -10530,10 +10530,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -11016,10 +11016,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -11503,10 +11503,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -12253,10 +12253,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -12740,10 +12740,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -13227,10 +13227,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -13713,10 +13713,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -14200,10 +14200,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -14686,10 +14686,10 @@ else:
                     p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,5]
+                    y1data= pp_solutions_fitnesses_tn[:,4]
+                    x2data= pp_solutions_fitnesses_tp[:,5]
+                    y2data= pp_solutions_fitnesses_tp[:,4]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -15175,10 +15175,10 @@ else:
                     p6= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4,p5,p6)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,7]
+                    y1data= pp_solutions_fitnesses_tn[:,6]
+                    x2data= pp_solutions_fitnesses_tp[:,7]
+                    y2data= pp_solutions_fitnesses_tp[:,6]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -15664,10 +15664,10 @@ else:
                     p6= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4,p5,p6)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,7]
+                    y1data= pp_solutions_fitnesses_tn[:,6]
+                    x2data= pp_solutions_fitnesses_tp[:,7]
+                    y2data= pp_solutions_fitnesses_tp[:,6]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -16154,10 +16154,10 @@ else:
                     p6= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4,p5,p6)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,7]
+                    y1data= pp_solutions_fitnesses_tn[:,6]
+                    x2data= pp_solutions_fitnesses_tp[:,7]
+                    y2data= pp_solutions_fitnesses_tp[:,6]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -16646,10 +16646,10 @@ else:
                     p8= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4,p5,p6,p7,p8)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6,p7,p8)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,9]
+                    y1data= pp_solutions_fitnesses_tn[:,8]
+                    x2data= pp_solutions_fitnesses_tp[:,9]
+                    y2data= pp_solutions_fitnesses_tp[:,8]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
@@ -17138,10 +17138,10 @@ else:
                     p8= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2,p3,p4,p5,p6,p7,p8)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6,p7,p8)
-                    x1data= pp_solutions_fitnesses_tn[:,3]
-                    y1data= pp_solutions_fitnesses_tn[:,2]
-                    x2data= pp_solutions_fitnesses_tp[:,3]
-                    y2data= pp_solutions_fitnesses_tp[:,2]
+                    x1data= pp_solutions_fitnesses_tn[:,9]
+                    y1data= pp_solutions_fitnesses_tn[:,8]
+                    x2data= pp_solutions_fitnesses_tp[:,9]
+                    y2data= pp_solutions_fitnesses_tp[:,8]
                     def Gauss(x, A,B,C):
                         y = A*x + B*x**2 + C
                         return y
