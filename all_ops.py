@@ -6325,8 +6325,8 @@ else:
                     encost2=round(cost2*0.04,2)
                     ocost2=round(cost2*0.03,2)
     
-                    df1= pd.DataFrame(pp_solutions_fitnesses_tn,columns=["Area (sft)","depth (ft)","cost (USD)","Reduction (%)"])  
-                    df2= pd.DataFrame(pp_solutions_fitnesses_tp,columns=["Area (sft)","depth (ft)","cost (USD)","Reduction (%)"])
+                    df1= pd.DataFrame(pp_solutions_fitnesses_tn,columns=["Area of Bioretention (sft)","depth of Bioretention (ft)","Area of Dry Pond (sft)","depth of Dry Pond (ft)","cost (USD)","Reduction (%)"])  
+                    df2= pd.DataFrame(pp_solutions_fitnesses_tp,columns=["Area of Bioretention (sft)","depth of Bioretention (ft)","Area of Dry Pond (sft)","depth of Dry Pond (ft)","cost (USD)","Reduction (%)"])
                     with tab1:
                         fig1 = px.line(df1, x="cost (USD)", y="Reduction (%)")
                         fig2 = px.scatter(df1, x="cost (USD)", y="Reduction (%)", color='Area (sft)',color_continuous_scale=px.colors.sequential.Bluered)
@@ -6812,8 +6812,8 @@ else:
                     encost2=round(cost2*0.04,2)
                     ocost2=round(cost2*0.03,2)
     
-                    df1= pd.DataFrame(pp_solutions_fitnesses_tn,columns=["Area (sft)","depth (ft)","cost (USD)","Reduction (%)"])  
-                    df2= pd.DataFrame(pp_solutions_fitnesses_tp,columns=["Area (sft)","depth (ft)","cost (USD)","Reduction (%)"])
+                    df1= pd.DataFrame(pp_solutions_fitnesses_tn,columns=["Area of Bioretention (sft)","depth of Bioretention (ft)","Area of Dry Pond (sft)","depth of Dry Pond (ft)","cost (USD)","Reduction (%)"])  
+                    df2= pd.DataFrame(pp_solutions_fitnesses_tp,columns=["Area of Bioretention (sft)","depth of Bioretention (ft)","Area of Dry Pond (sft)","depth of Dry Pond (ft)","cost (USD)","Reduction (%)"])
                     with tab1:
                         fig1 = px.line(df1, x="cost (USD)", y="Reduction (%)")
                         fig2 = px.scatter(df1, x="cost (USD)", y="Reduction (%)", color='Area (sft)',color_continuous_scale=px.colors.sequential.Bluered)
