@@ -6269,7 +6269,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -6278,7 +6278,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -6754,7 +6754,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -6763,7 +6763,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -7238,7 +7238,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -7247,7 +7247,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -8517,7 +8517,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -8526,7 +8526,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -9002,7 +9002,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -9011,7 +9011,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -9487,7 +9487,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -9496,7 +9496,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -10497,7 +10497,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -10506,7 +10506,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -10981,7 +10981,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -10990,7 +10990,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -11466,7 +11466,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -11475,7 +11475,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -12214,7 +12214,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -12223,7 +12223,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -12699,7 +12699,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -12708,7 +12708,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -13184,7 +13184,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -13193,7 +13193,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -13668,7 +13668,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -13677,7 +13677,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -14153,7 +14153,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -14162,7 +14162,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -14637,7 +14637,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -14646,7 +14646,7 @@ else:
                     mean_fitnesses_tp = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop)
+                        fitnesses_tp = simple_1d_fitness_func_tp(pop,pop,pop,pop)
                         mean_fitnesses_tp.append(np.mean(fitnesses_tp,axis=0))
                         
                         # transition to next generation
@@ -15122,7 +15122,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -16591,7 +16591,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop,pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
@@ -17083,7 +17083,7 @@ else:
                     mean_fitnesses_tn = []
                     for generation in range(30):
                         # evaluate pop 
-                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop)
+                        fitnesses_tn = simple_1d_fitness_func_tn(pop,pop,pop,pop,pop,pop,pop,pop)
                         mean_fitnesses_tn.append(np.mean(fitnesses_tn,axis=0))
                         
                         # transition to next generation
