@@ -6818,9 +6818,9 @@ else:
                         fig1 = px.line(df1, x="cost (USD)", y="Reduction (%)")
                         fig2 = px.scatter(df1, x="cost (USD)", y="Reduction (%)", color='Area of Bioretention (sft)',color_continuous_scale=px.colors.sequential.Bluered)
                         fig3 = go.Figure(data=fig1.data + fig2.data)
-                        fig2.add_hline(y=removal_n,name= 'Reduction level',line=dict(color='firebrick', width=2,
+                        fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
-                        fig2.add_hrect(y0=removal_n-con_level, y1=removal_n + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                        fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
                         fig2.add_annotation(
                                     text="Total Nitrogene Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost1) + '<br> Available Total Nitrogene Concentration = '+str(atn)+ 'lb',
                                     align = 'left',
@@ -6878,13 +6878,13 @@ else:
                         st.plotly_chart(fig2, use_container_width=True)
                     with tab2:
                         fig1 = px.line(df2, x="cost (USD)", y="Reduction (%)")
-                        fig2 = px.scatter(df2, x="cost (USD)", y="Reduction (%)", color='Area (sft)',color_continuous_scale=px.colors.sequential.Bluered)
+                        fig2 = px.scatter(df2, x="cost (USD)", y="Reduction (%)", color='Area of Bioretention (sft)',color_continuous_scale=px.colors.sequential.Bluered)
                         fig3 = go.Figure(data=fig1.data + fig2.data)
-                        fig2.add_hline(y=removal_p,name= 'Reduction level',line=dict(color='firebrick', width=2,
+                        fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
-                        fig2.add_hrect(y0=removal_p-con_level, y1=removal_p + con_level, line_width=0, fillcolor="red", opacity=0.2)
+                        fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
                         fig2.add_annotation(
-                                    text="Total Phosphorus Reduction = "+str(removal_p)+' % <br> Total Cost = $'+str(cost2) + '<br> Available Total Phosphorus Concentration = '+str(atp)+ 'lb',
+                                    text="Total Phosphorus Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost2) + '<br> Available Total Phosphorus Concentration = '+str(atp)+ 'lb',
                                     align = 'left',
                                     showarrow= False,
                                     xref='paper',
