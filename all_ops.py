@@ -2284,7 +2284,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Vegetative Filter Bed")
-                    tab1,tab2,tab3,tab4,tab5,tab6 = st.tabs(["graph_N","Graph_P","Table_N","Table_P","Cost_N","Cost_P"])
+                    tab1,tab2,tab3= st.tabs(["graph,"Table,"Cost"])
                     def simple_1d_fitness_func_tp(p1,p2):
                         objective_1 = 687.5*(p1*p2)**0.59 
                         objective_2 = (584.706*(p2)**0.012)-560.448
@@ -2763,7 +2763,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Wet Pond")
-                    tab1,tab2,tab3,tab4,tab5,tab6 = st.tabs(["graph","Tabl","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2):
                         objective_1 = 1875*(p1*p2)**0.503 
                         objective_2 = (4389.78*(p2)**0.012)-4186.26
