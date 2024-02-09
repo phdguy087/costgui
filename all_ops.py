@@ -6816,13 +6816,13 @@ else:
                     df2= pd.DataFrame(pp_solutions_fitnesses_tp,columns=["Area of Bioretention (sft)","depth of Bioretention (ft)","Area of Dry Pond (sft)","depth of Dry Pond (ft)","cost (USD)","Reduction (%)"])
                     with tab1:
                         fig1 = px.line(df1, x="cost (USD)", y="Reduction (%)")
-                        fig2 = px.scatter(df1, x="cost (USD)", y="Reduction (%)", color='Area (sft)',color_continuous_scale=px.colors.sequential.Bluered)
+                        fig2 = px.scatter(df1, x="cost (USD)", y="Reduction (%)", color='Area of Bioretention (sft)',color_continuous_scale=px.colors.sequential.Bluered)
                         fig3 = go.Figure(data=fig1.data + fig2.data)
                         fig2.add_hline(y=removal_n,name= 'Reduction level',line=dict(color='firebrick', width=2,
                                                       dash='dash'))
                         fig2.add_hrect(y0=removal_n-con_level, y1=removal_n + con_level, line_width=0, fillcolor="red", opacity=0.2)
                         fig2.add_annotation(
-                                    text="Total Nitrogene Reduction = "+str(removal_n)+' % <br> Total Cost = $'+str(cost1) + '<br> Available Total Nitrogene Concentration = '+str(atn)+ 'lb',
+                                    text="Total Nitrogene Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost1) + '<br> Available Total Nitrogene Concentration = '+str(atn)+ 'lb',
                                     align = 'left',
                                     showarrow= False,
                                     xref='paper',
