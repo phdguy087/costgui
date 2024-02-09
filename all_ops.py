@@ -5246,15 +5246,25 @@ else:
                     encost=round(cost*0.08,2)
                     ocost=round(cost*0.04,2)
                     df= pd.DataFrame(pp_solutions_fitnesses,columns=["Area of Bioretention (sft)","depth of Bioretention (ft)","Area of Dry Pond (sft)","depth of Dry Pond (ft)","cost (USD)","Reduction (%)"])
+                    df["Nitrogen Reduction (lb/yr)"]=df["Reduction (%)"]*(tn/100)
+                    df["Phosphorus Reduction (lb/yr)"]=df["Reduction (%)"]*(tp/100)
+                    tn_removal=(tn*removal)/100
+                    tp_removal=(tp*removal)/100
+                    tn_con=(tn*con_level)/100
+                    tp_con=(tp*con_level)/100
                     with tab1:
-                        fig1 = px.line(df, x="cost (USD)", y="Reduction (%)")
-                        fig2 = px.scatter(df, x="cost (USD)", y="Reduction (%)", color='Area of Bioretention (sft)',color_continuous_scale=px.colors.sequential.Bluered)
-                        fig3 = go.Figure(data=fig1.data + fig2.data)
-                        fig2.add_hline(y=removal,name= 'Reduction level',line=dict(color='firebrick', width=2,
-                                                      dash='dash'))
-                        fig2.add_hrect(y0=removal-con_level, y1=removal + con_level, line_width=0, fillcolor="red", opacity=0.2)
-                        fig2.add_annotation(
-                                    text="Total Nutrient Reduction = "+str(removal)+' % <br> Total Cost = $'+str(cost) + '<br> Available Total Nitrogene Concentration = '+str(atn)+ 'lb <br> Available Total Phosphorus  Concentration = '+str(atp)+'lb',
+                        fig=make_subplots(rows=2, cols=1,shared_xaxes=True,vertical_spacing=0.1,subplot_titles=("Nitrogen Reduction","Phosphorus Reduction"))
+                        fig.add_trace(go.Scatter(x=df["cost (USD)"],y=df["Nitrogen Reduction (lb/yr)"],mode='markers',name='Nitrogen Reduction',marker=dict(color='rgba(8,88,158, 0.6)')),row = 1, col = 1)
+                        fig.add_trace(go.Scatter(x=df["cost (USD)"],y=df["Phosphorus Reduction (lb/yr)"],mode='markers',name='Phosphorus Reduction',marker=dict(color='rgba(241,105,19, 0.6)')),row = 2, col = 1)
+                       
+                        fig.add_hline(y=tn_removal,name= 'Nitrogen Reduction',line=dict(color='firebrick', width=2,
+                                                     dash='dash'),row = 1, col = 1)
+                        fig.add_hline(y=tp_removal,name= 'Phosphorus Reduction',line=dict(color='firebrick', width=2,
+                                                     dash='dash'),row = 2, col = 1)
+                        fig.add_hrect(y0=tn_removal-tn_con, y1=tn_removal + tn_con, line_width=0, fillcolor="red", opacity=0.2,row = 1, col = 1)
+                        fig.add_hrect(y0=tp_removal-tp_con, y1=tp_removal + tp_con, line_width=0, fillcolor="red", opacity=0.2,row = 2, col = 1)
+                        fig.add_annotation(
+                                    text='Total Cost = $'+str(cost) + '<br>Total Nitrogen Concentration = '+str(atn)+ ' lb/year',
                                     align = 'left',
                                     showarrow= False,
                                     xref='paper',
@@ -5262,52 +5272,95 @@ else:
                                     font=dict(family='Arial',
                                               size=20,
                                               color='black'),
-                                    bgcolor='rgb(127,205,187)',
-                                    y=1,
-                                    x=0,
-                                    xanchor='left')
-                        fig2.update_layout(height=600, width=800,  
-                              
-                         showlegend=True,
-                         
-                         font=dict(
-                             family="Arial",
-                             size=25,
-                             color="Black"),
-                         xaxis=dict(
-                             showline=True,
-                             showgrid=False,
-                             showticklabels=True,
-                             linecolor='black',
-                             title='Cost (USD)',
-                             titlefont=dict(
-                                 family='Arial',
-                                 size = 25,
-                                 color= 'black'),
-                             linewidth=2,
-                             ticks='outside',
-                             tickfont=dict(
-                                 family='Arial',
-                                 size=20,
-                                 color='black',
-                                 )),yaxis=dict(
-                                     title='Nutrient Reduction (%)',
-                                     titlefont=dict(
-                                 family='Arial',
-                                 size = 25,
-                                 color= 'black'),
-                                     showline=True,
-                                     showgrid=False,
-                                     showticklabels=True,
-                                     linecolor='black',
-                                     linewidth=2,
-                                     ticks='outside',
-                                     tickfont=dict(
-                                         family='Arial',
-                                         size=20,
-                                         color='black',
-                                         )))
-                        st.plotly_chart(fig2, use_container_width=True)
+                                    bgcolor='rgb(103,169,207)',
+                                    y=tn,
+                                    x=df.iloc[0]["cost (USD)"],
+                                    xanchor='left',row=1, col=1)
+                        fig.add_annotation(
+                                    text='Total Cost = $'+str(cost) + '<br>Total Phosphorus  Concentration = '+str(atp)+' lb/year',
+                                    align = 'left',
+                                    showarrow= False,
+                                    xref='paper',
+                                    yref='paper',
+                                    font=dict(family='Arial',
+                                              size=20,
+                                              color='black'),
+                                    bgcolor='rgb(253,208,162)',
+                                    y=tp,
+                                    x=df.iloc[0]["cost (USD)"],
+                                    xanchor='left',row=2, col=1)
+                        fig.update_xaxes(showline=True,
+                                         showgrid=False,
+                                         linecolor='black',
+                                         linewidth=2,
+                                         ticks='outside',
+                                         tickfont=dict(
+                                             family='Arial',
+                                             size=20,
+                                             color='black'),
+                                         row=1, col=1)
+                        fig.update_xaxes(title_text="Cost (USD)",showline=True,
+                                         showgrid=False,
+                                         linecolor='black',
+                                         titlefont=dict(
+                                             family='Arial',
+                                             size = 25,
+                                            color= 'black'),
+                                         linewidth=2,
+                                         ticks='outside',
+                                         tickfont=dict(
+                                             family='Arial',
+                                             size=20,
+                                             color='black'),
+                                         row=2, col=1)
+                        fig.update_yaxes(title_text="Nitrogene Reduction (lb/year)",showline=True,
+                                         showgrid=False,
+                                         linecolor='black',
+                                         titlefont=dict(
+                                             family='Arial',
+                                             size = 25,
+                                            color= 'black'),
+                                         linewidth=2,
+                                         ticks='outside',
+                                         tickfont=dict(
+                                             family='Arial',
+                                             size=20,
+                                             color='black'),
+                                         row=1, col=1)
+                        fig.update_yaxes(title_text="Phosphorus Reduction (lb/year)",showline=True,
+                                         showgrid=False,
+                                         linecolor='black',
+                                         titlefont=dict(
+                                             family='Arial',
+                                             size = 25,
+                                            color= 'black'),
+                                         linewidth=2,
+                                         ticks='outside',
+                                         tickfont=dict(
+                                             family='Arial',
+                                             size=20,
+                                             color='black'),
+                                         row=2, col=1)
+                                         
+                        
+                        fig.update_layout(height=1200, width=1000,
+                                          font=dict(
+                                              family="Arial",
+                                              size=30,
+                                              color="Black"),
+                                          showlegend=True,
+                                          legend=dict(
+                                             orientation="h",
+                                             yanchor="bottom",
+                                             y=1.02,
+                                             xanchor="right",
+                                             x=1,
+                                             title_font_family="Times New Roman",
+                                             font=dict(family="Arial",
+                                             size=25,
+                                             color="black")))   
+                        fig.update_layout(legend= {'itemsizing': 'constant'})
+                        st.plotly_chart(fig, use_container_width=False)
                         
                     with tab2:
                         st.dataframe(df)
@@ -5320,8 +5373,8 @@ else:
                            name='Planning Cost',
                            orientation='h',
                            marker=dict(
-                            color='rgba(246, 78, 139, 0.6)',
-                            line=dict(color='rgba(246, 78, 139, 1.0)', width=3)
+                            color='rgba(166,206,227, 0.6)',
+                            
                                   )
                                   ))
                         fig.add_trace(go.Bar(
@@ -5330,8 +5383,8 @@ else:
                         name='Construction Cost',
                         orientation='h',
                         marker=dict(
-                        color='rgba(202, 0, 32, 0.6)',
-                        line=dict(color='rgba(202, 0, 32, 1.0)', width=3)
+                        color='rgba(31,120,180, 0.6)',
+                        
                            )
                             ))
                         fig.add_trace(go.Bar(
@@ -5340,8 +5393,8 @@ else:
                         name='Operations and Maintenance Cost',
                         orientation='h',
                         marker=dict(
-                        color='rgba(230, 97, 1, 0.6)',
-                        line=dict(color='rgba(230, 97, 1, 1.0)', width=3)
+                        color='rgba(178,223,138, 0.6)',
+                        
                            )
                             ))
                         fig.add_trace(go.Bar(
@@ -5350,8 +5403,8 @@ else:
                         name='End of Life Cost',
                         orientation='h',
                         marker=dict(
-                        color='rgba(58, 71, 80, 0.6)',
-                        line=dict(color='rgba(58, 71, 80, 1.0)', width=3)
+                        color='rgba(51,160,44, 0.6)',
+                        
                            )
                             ))
                         fig.add_trace(go.Bar(
@@ -5360,8 +5413,8 @@ else:
                         name='Materials',
                         orientation='h',
                         marker=dict(
-                        color='rgba(227, 26, 28, 0.6)',
-                        line=dict(color='rgba(227, 26, 28, 1.0)', width=3)
+                        color='rgba(251,154,153, 0.6)',
+                        
                            )
                             ))
                         fig.add_trace(go.Bar(
@@ -5370,8 +5423,8 @@ else:
                         name='Labors',
                         orientation='h',
                         marker=dict(
-                        color='rgba(251, 154, 153, 0.6)',
-                        line=dict(color='rgba(251, 154, 153, 1.0)', width=3)
+                        color='rgba(227,26,28, 0.6)',
+                        
                            )
                             ))
                         fig.add_trace(go.Bar(
@@ -5380,8 +5433,8 @@ else:
                         name='Equipments',
                         orientation='h',
                         marker=dict(
-                        color='rgba(51, 160, 44, 0.6)',
-                        line=dict(color='rgba(51, 160, 44, 1.0)', width=3)
+                        color='rgba(255,127,0, 0.6)',
+                        
                            )
                             ))
                         fig.add_trace(go.Bar(
@@ -5390,8 +5443,8 @@ else:
                         name='Energy',
                         orientation='h',
                         marker=dict(
-                        color='rgba(31, 120, 180, 0.6)',
-                        line=dict(color='rgba(31, 120, 180, 1.0)', width=3)
+                        color='rgba(202,178,214, 0.6)',
+                        
                            )
                             ))
                         fig.add_trace(go.Bar(
@@ -5400,8 +5453,7 @@ else:
                         name='Others',
                         orientation='h',
                         marker=dict(
-                        color='rgba(166, 206, 227, 0.6)',
-                        line=dict(color='rgba(166, 206, 227, 1.0)', width=3)
+                        color='rgba(106,61,154, 0.6)'
                            )
                             ))
 
