@@ -5823,7 +5823,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Bioretention")
+                    st.subheader("Optimal Outcomes for Bioretention & Grassed Swale")
                     tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 42504*(p3*p4)**0.0344    
@@ -6139,7 +6139,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Bioretention")
+                    st.subheader("Optimal Outcomes for Bioretention & Infiltration Trench")
                     tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 27632*(p3*p4)**0.0431    
@@ -6455,7 +6455,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Bioretention & Constructed Wetland")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 1875*(p3*p4)**0.503 
@@ -6933,7 +6933,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Bioretention & Vegetative Filterbed")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 687.5*(p3*p4)**0.59 
@@ -7412,7 +7412,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Bioretention & Wet Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 1875*(p3*p4)**0.503
@@ -7890,7 +7890,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Bioretention")
+                    st.subheader("Optimal Outcomes for Porous Pavement & Dry Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 10525*(p3*p4)**0.29 
@@ -8206,7 +8206,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Bioretention")
+                    st.subheader("Optimal Outcomes for Porous Pavement & Grassed Swale")
                     tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 42504*(p3*p4)**0.0344    
@@ -8522,7 +8522,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Bioretention")
+                    st.subheader("Optimal Outcomes for Porous Pavement & Infiltration Trench")
                     tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 27632*(p3*p4)**0.0431    
@@ -8837,7 +8837,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Porous Pavement & Constructed Wetland")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 1875*(p3*p4)**0.503 
@@ -9320,7 +9320,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Porous Pavement & Vegetative Filterbed")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 687.5*(p3*p4)**0.59 
@@ -9798,7 +9798,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Porous Pavement & Wet Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 1875*(p3*p4)**0.503  
@@ -10277,7 +10277,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Bioretention")
+                    st.subheader("Optimal Outcomes for Infiltration Trench & Dry Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 10525*(p3*p4)**0.29  
@@ -10592,7 +10592,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Bioretention")
+                    st.subheader("Optimal Outcomes for Infiltration Trench & Grassed Swale")
                     tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 42504*(p3*p4)**0.0344   
@@ -10907,7 +10907,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Infiltration Trench & Constructed Wetland")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 1875*(p3*p4)**0.503  
@@ -11384,7 +11384,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Infiltration Trench & Vegetative Filterbed")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 687.5*(p3*p4)**0.59 
@@ -11863,7 +11863,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Infiltration Trench & Wet Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 1875*(p3*p4)**0.503  
@@ -12342,7 +12342,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Bioretention")
+                    st.subheader("Optimal Outcomes for Grassed Swale & Dry Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 42504*(p1*p2)**0.0344   + 10525*(p3*p4)**0.29 
@@ -12657,7 +12657,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Grassed Swale & Constructed Wetland")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 42504*(p1*p2)**0.0344   + 1875*(p3*p4)**0.503  
@@ -13136,7 +13136,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Grassed Swale & Vegetative Filterbed")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 42504*(p1*p2)**0.0344  + 687.5*(p3*p4)**0.59 
@@ -13615,7 +13615,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Grassed Swale & Wet Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 42504*(p1*p2)**0.0344   + 1875*(p3*p4)**0.503  
@@ -14094,7 +14094,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Wet Pond & Vegetative Filterbed")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 687.5*(p1*p2)**0.59 + 1875*(p3*p4)**0.503  
@@ -14572,7 +14572,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Vegetative Filterbed & Constructed Wetland")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 687.5*(p1*p2)**0.59 + 1875*(p3*p4)**0.503   
@@ -15050,7 +15050,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Dry Pond & Vegetative Filterbed")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 10525*(p1*p2)**0.29 + 687.5*(p3*p4)**0.59 
@@ -15530,7 +15530,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Bioretention, Porous Pavement & Wet Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6):
                         objective_1 = 29631*(p1*p2)**0.026 +40540*(p3*p4)**0.0327+ 1875*(p5*p6)**0.503 
@@ -16011,7 +16011,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Bioretention, Grassed Swale & Wet Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6):
                         objective_1 = 29631*(p1*p2)**0.026 + 42504*(p3*p4)**0.0344 + 1875*(p5*p6)**0.503  
@@ -16492,7 +16492,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Bioretention, Vegetative Filterbed & Wet Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6):
                         objective_1 = 29631*(p1*p2)**0.026 + 29631*(p3*p4)**0.026 +687.5*(p5*p6)**0.59   
@@ -16975,7 +16975,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Bioretention, Porous Pavement, Vegetative Filterbed & Wet Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6,p7,p8):
                         objective_1 = 29631*(p1*p2)**0.026 + 40540*(p3*p4)**0.0327 + 687.5*(p5*p6)**0.59 + 1875*(p7*p8)**0.503  
@@ -17459,7 +17459,7 @@ else:
             q=st.button('Run')
             if q:
                 with col2:
-                    st.subheader("Optimal Outcomes for Vegetative Filter Bed")
+                    st.subheader("Optimal Outcomes for Bioretention, Porous Pavement, Grassed Swale & Wet Pond")
                     tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6,p7,p8):
                         objective_1 = 29631*(p1*p2)**0.026 + 40540*(p3*p4)**0.0327 + 42504*(p5*p6)**0.0344  + 1875*(p7*p8)**0.503  
