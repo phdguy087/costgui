@@ -220,7 +220,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2):
                         objective_1 = 29631*(p1*p2)**0.026 
                         objective_2 = (98-(117.1*(2.718)**(-5.21*(p2))))
@@ -562,7 +562,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Dry Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2):
                         objective_1 = 10525*(p1*p2)**0.29 
                         objective_2 = (98.26-(109.04*(2.718)**(-5.75*(p2))))
@@ -875,7 +875,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Constructed Wetland")
-                    tab1,tab2,tab3= st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3= st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2):
                         objective_1 = 1875*(p1*p2)**0.503 
                         objective_2 = (4389.78*(p2)**0.012)-4266.26
@@ -1348,7 +1348,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Grassed Swale")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2):
                         objective_1 = 42504*(p1*p2)**0.0344 
                         objective_2 = (97.7936-(107.28*(2.718)**(-5.85*(p2))))
@@ -1660,7 +1660,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Infiltration Trench")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2):
                         objective_1 = 27632*(p1*p2)**0.0431 
                         objective_2 = (63767.5*(p2)**0.000285)-63679.2
@@ -1971,7 +1971,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Porous Pavement")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2):
                         objective_1 = 40540*(p1*p2)**0.0327 
                         objective_2 = (97.9016-(105.3*(2.718)**(-5.51*(p2))))
@@ -2284,7 +2284,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Vegetative Filter Bed")
-                    tab1,tab2,tab3= st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3= st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2):
                         objective_1 = 687.5*(p1*p2)**0.59 
                         objective_2 = (584.706*(p2)**0.012)-560.448
@@ -2763,7 +2763,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2):
                         objective_1 = 1875*(p1*p2)**0.503 
                         objective_2 = (4389.78*(p2)**0.012)-4186.26
@@ -3238,7 +3238,7 @@ if page == 'Single':
             if q:
                 with col2:
                     st.subheader("Comparisons among the single use implementations")
-                    tab1,tab2,tab3= st.tabs(["graph","Table_N","Table_P"])
+                    tab1,tab2,tab3= st.tabs(["Comparisons","Cost Overview","Cost Structure"])
                     def bioretention(p1,p2):
                         objective_1 = 29631*(p1*p2)**0.026 
                         objective_2 = (98-(117.1*(2.718)**(-5.21*(p2))))
@@ -5196,7 +5196,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention & Dry Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 10525*(p3*p4)**0.29   
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*(98.26-(109.04*(2.718)**(-5.75*(p4)))))/100
@@ -5510,7 +5510,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention & Porous Pavement")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 40540*(p3*p4)**0.0327   
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*(97.9016-(105.3*(2.718)**(-5.51*(p4)))))/100
@@ -5824,7 +5824,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention & Grassed Swale")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 42504*(p3*p4)**0.0344    
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*(97.7936-(107.28*(2.718)**(-5.85*(p4)))))/100
@@ -6140,7 +6140,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention & Infiltration Trench")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 27632*(p3*p4)**0.0431    
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*((63767.5*(p4)**0.000285)-63679.2))/100
@@ -6456,7 +6456,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention & Constructed Wetland")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 1875*(p3*p4)**0.503 
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p4))))*((4389.78*(p2)**0.012)-4286.26))/100
@@ -6934,7 +6934,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention & Vegetative Filterbed")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 687.5*(p3*p4)**0.59 
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*((584.706*(p4)**0.012)-560.448))/100
@@ -7413,7 +7413,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention & Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 29631*(p1*p2)**0.026 + 1875*(p3*p4)**0.503
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*((4389.78*(p4)**0.012)-4286.26))/100
@@ -7891,7 +7891,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Porous Pavement & Dry Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 10525*(p3*p4)**0.29 
                         objective_2 = ((97.9016-(105.3*(2.718)**(-5.51*(p2))))*(98.26-(109.04*(2.718)**(-5.75*(p4)))))/100
@@ -8207,7 +8207,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Porous Pavement & Grassed Swale")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 42504*(p3*p4)**0.0344    
                         objective_2 = ((97.9016-(105.3*(2.718)**(-5.51*(p2))))*(97.7936-(107.28*(2.718)**(-5.85*(p4)))))/100
@@ -8523,7 +8523,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Porous Pavement & Infiltration Trench")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 27632*(p3*p4)**0.0431    
                         objective_2 = ((97.9016-(105.3*(2.718)**(-5.51*(p2))))*((63767.5*(p4)**0.000285)-63679.2))/100
@@ -8838,7 +8838,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Porous Pavement & Constructed Wetland")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 1875*(p3*p4)**0.503 
                         objective_2 = ((97.9016-(105.3*(2.718)**(-5.51*(p2))))*((4389.78*(p4)**0.012)-4286.26))/100
@@ -9321,7 +9321,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Porous Pavement & Vegetative Filterbed")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 687.5*(p3*p4)**0.59 
                         objective_2 = ((97.9016-(105.3*(2.718)**(-5.51*(p2))))*((584.706*(p4)**0.012)-560.448))/100
@@ -9799,7 +9799,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Porous Pavement & Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 40540*(p1*p2)**0.0327  + 1875*(p3*p4)**0.503  
                         objective_2 = ((97.9016-(105.3*(2.718)**(-5.51*(p2))))*((4389.78*(p4)**0.012)-4286.26))/100
@@ -10278,7 +10278,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Infiltration Trench & Dry Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 10525*(p3*p4)**0.29  
                         objective_2 = (((63767.5*(p2)**0.000285)-63679.2)*(98.26-(109.04*(2.718)**(-5.75*(p4)))))/100
@@ -10593,7 +10593,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Infiltration Trench & Grassed Swale")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 42504*(p3*p4)**0.0344   
                         objective_2 = (((63767.5*(p2)**0.000285)-63679.2)*(97.7936-(107.28*(2.718)**(-5.85*(p4)))))/100
@@ -10908,7 +10908,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Infiltration Trench & Constructed Wetland")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 1875*(p3*p4)**0.503  
                         objective_2 = (((63767.5*(p2)**0.000285)-63679.2)*((4389.78*(p4)**0.012)-4286.26))/100
@@ -11385,7 +11385,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Infiltration Trench & Vegetative Filterbed")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 687.5*(p3*p4)**0.59 
                         objective_2 = (((63767.5*(p2)**0.000285)-63679.2)*((584.706*(p4)**0.012)-560.448))/100
@@ -11864,7 +11864,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Infiltration Trench & Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 27632*(p1*p2)**0.0431  + 1875*(p3*p4)**0.503  
                         objective_2 = (((63767.5*(p2)**0.000285)-63679.2)*((4389.78*(p4)**0.012)-4286.26))/100
@@ -12343,7 +12343,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Grassed Swale & Dry Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func(p1,p2,p3,p4):
                         objective_1 = 42504*(p1*p2)**0.0344   + 10525*(p3*p4)**0.29 
                         objective_2 = ((97.7936-(107.28*(2.718)**(-5.85*(p2))))*(98.26-(109.04*(2.718)**(-5.75*(p4)))))/100
@@ -12658,7 +12658,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Grassed Swale & Constructed Wetland")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 42504*(p1*p2)**0.0344   + 1875*(p3*p4)**0.503  
                         objective_2 = ((97.7936-(107.28*(2.718)**(-5.85*(p2))))*((4389.78*(p4)**0.012)-4286.26))/100
@@ -13137,7 +13137,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Grassed Swale & Vegetative Filterbed")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 42504*(p1*p2)**0.0344  + 687.5*(p3*p4)**0.59 
                         objective_2 = ((97.7936-(107.28*(2.718)**(-5.85*(p2))))*((584.706*(p4)**0.012)-560.448))/100
@@ -13616,7 +13616,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Grassed Swale & Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 42504*(p1*p2)**0.0344   + 1875*(p3*p4)**0.503  
                         objective_2 = ((97.7936-(107.28*(2.718)**(-5.85*(p2))))*((4389.78*(p4)**0.012)-4286.26))/100
@@ -14095,7 +14095,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Wet Pond & Vegetative Filterbed")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 687.5*(p1*p2)**0.59 + 1875*(p3*p4)**0.503  
                         objective_2 = (((29.031*(p2)**0.17)+ 8.47)*((4389.78*(p4)**0.012)-4286.26))/100
@@ -14573,7 +14573,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Vegetative Filterbed & Constructed Wetland")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tn(p1,p2,p3,p4):
                         objective_1 = 687.5*(p1*p2)**0.59 + 1875*(p3*p4)**0.503   
                         objective_2 = (((29.031*(p2)**0.17)+ 8.47)*((4389.78*(p4)**0.012)-4286.26))/100
@@ -15051,7 +15051,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Dry Pond & Vegetative Filterbed")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4):
                         objective_1 = 10525*(p1*p2)**0.29 + 687.5*(p3*p4)**0.59 
                         objective_2 = ((98.26-(109.04*(2.718)**(-5.75*(p2))))*((584.706*(p4)**0.012)-560.448))/100
@@ -15531,7 +15531,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention, Porous Pavement & Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6):
                         objective_1 = 29631*(p1*p2)**0.026 +40540*(p3*p4)**0.0327+ 1875*(p5*p6)**0.503 
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*(97.9016-(105.3*(2.718)**(-5.51*(p4))))*((4389.78*(p6)**0.012)-4286.26))/10000
@@ -16012,7 +16012,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention, Grassed Swale & Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6):
                         objective_1 = 29631*(p1*p2)**0.026 + 42504*(p3*p4)**0.0344 + 1875*(p5*p6)**0.503  
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*(97.7936-(107.28*(2.718)**(-5.85*(p4))))*((4389.78*(p6)**0.012)-4286.26))/10000
@@ -16493,7 +16493,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention, Vegetative Filterbed & Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6):
                         objective_1 = 29631*(p1*p2)**0.026 + 29631*(p3*p4)**0.026 +687.5*(p5*p6)**0.59   
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*((29.031*(p4)**0.17)+ 8.47)*((4389.78*(p6)**0.012)-4286.26))/10000
@@ -16976,7 +16976,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention, Porous Pavement, Vegetative Filterbed & Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6,p7,p8):
                         objective_1 = 29631*(p1*p2)**0.026 + 40540*(p3*p4)**0.0327 + 687.5*(p5*p6)**0.59 + 1875*(p7*p8)**0.503  
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*(97.9016-(105.3*(2.718)**(-5.51*(p4))))*((29.031*(p6)**0.17)+ 8.47)*((4389.78*(p8)**0.012)-4286.26))/1000000
@@ -17460,7 +17460,7 @@ else:
             if q:
                 with col2:
                     st.subheader("Optimal Outcomes for Bioretention, Porous Pavement, Grassed Swale & Wet Pond")
-                    tab1,tab2,tab3 = st.tabs(["graph","Table","Cost"])
+                    tab1,tab2,tab3 = st.tabs(["Pareto Optimal Curve","Possible Outcomes","Cost Structure"])
                     def simple_1d_fitness_func_tp(p1,p2,p3,p4,p5,p6,p7,p8):
                         objective_1 = 29631*(p1*p2)**0.026 + 40540*(p3*p4)**0.0327 + 42504*(p5*p6)**0.0344  + 1875*(p7*p8)**0.503  
                         objective_2 = ((98-(117.1*(2.718)**(-5.21*(p2))))*(97.9016-(105.3*(2.718)**(-5.51*(p4))))*(97.7936-(107.28*(2.718)**(-5.85*(p6))))*((4389.78*(p8)**0.012)-4286.26))/1000000
