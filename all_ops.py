@@ -2814,12 +2814,12 @@ if page == 'Single':
                     fit_A1 = parameters1[0]
                     fit_B1 = parameters1[1]
                     fit_C1= parameters1[2]
-                    cost1 = fit_A1*removal_n +fit_B1*removal_n**2 + fit_C1 
+                    cost1 = round(fit_A1*removal_n +fit_B1*removal_n**2 + fit_C1,2) 
                     parameters2, covariance2 = curve_fit(Gauss, x2data, y2data)
                     fit_A2 = parameters2[0]
                     fit_B2 = parameters2[1]
                     fit_C2= parameters2[2]
-                    cost2 = fit_A2*removal_p +fit_B2*removal_p**2 + fit_C2
+                    cost2 = round(fit_A2*removal_p +fit_B2*removal_p**2 + fit_C2,2)
                     atn= round((tn*removal_n)/100,2)
                     atp= round((tp*removal_p)/100,2)
                     ecost=327.3
