@@ -6284,8 +6284,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -6769,8 +6771,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -7253,8 +7257,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -8532,8 +8538,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -9017,8 +9025,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -9502,8 +9512,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -10512,8 +10524,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -10996,8 +11010,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -11481,8 +11497,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -12229,8 +12247,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -12714,8 +12734,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -13199,8 +13221,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -13683,8 +13707,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -14168,8 +14194,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -14652,8 +14680,10 @@ else:
                         # transition to next generation
                         pop = NSGA2_create_next_generation(pop,fitnesses_tp,config)
                     
-                    p1 = np.linspace(100,number,100)
+                    p1 = np.linspace(100,number1,100)
                     p2= np.linspace(0.1,0.5,100)
+                    p3 = np.linspace(100,number2,100)
+                    p4= np.linspace(0.1,0.5,100)
                     pp_solutions_fitnesses_tn = simple_1d_fitness_func_tn(p1,p2)
                     pp_solutions_fitnesses_tp = simple_1d_fitness_func_tp(p1,p2)
                     x1data= pp_solutions_fitnesses_tn[:,3]
@@ -16069,7 +16099,7 @@ else:
         if SCM_type=='Bioretention, Vegetative Filterbed & Wet Pond':
             number1 = st.number_input('Available Area for Bioretention(sft)')
             number2 = st.number_input('Available  Area for Vegetative Filterbed(sft)')
-            number2 = st.number_input('Available  Area for Wet pond(sft)')
+            number3 = st.number_input('Available  Area for Wet pond(sft)')
             tn= st.number_input('Initial Total Nitrogene Concentration (lb)')
             tp= st.number_input('Initial Total Phosphorus Concentration (lb)')
             removal = st.slider('Required Nutrient Reduction', 0.0, 100.0, 0.5)
