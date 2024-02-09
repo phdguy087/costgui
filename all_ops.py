@@ -6537,7 +6537,7 @@ else:
                     df2= pd.DataFrame(pp_solutions_fitnesses_tp,columns=["Area of Bioretention (sft)","depth of Bioretention (ft)","Area of Dry Pond (sft)","depth of Dry Pond (ft)","cost (USD)","Reduction (%)"])
                     df1["Nitrogen Reduction (lb/yr)"]=df1["Reduction (%)"]*(tn/100)
                     df2["Phosphorus Reduction (lb/yr)"]=df2["Reduction (%)"]*(tp/100)
-                    df1["Phosphorus Reduction (%)"]=df2["Phosphorus Reduction (%)"]
+                    df1["Phosphorus Reduction (%)"]=df2["Reduction (%)"]
                     df1["Phosphorus Reduction (lb/yr)"]=df2["Phosphorus Reduction (lb/yr)"]
                     tn_removal=(tn*removal)/100
                     tp_removal=(tp*removal)/100
