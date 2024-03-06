@@ -6,6 +6,6 @@ def run():
 
 st.set_page_config(layout="wide")
 st.title("iPlantGreenS\u00b2 : Integrated Planning toolkit for Green Infrastructure Siting and Selection")
-
+tab1,tab2,tab3=st.tabs(["Home","GI Options","Tutorial"])
 if __name__ == "__main__":
     run()
