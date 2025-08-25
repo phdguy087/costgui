@@ -291,7 +291,7 @@ if page == 'Single':
                                     showarrow= False,
                                     xref='paper',
                                     yref='paper',
-                                    font=dict(family='Arial',
+                                    font=dict(family='Times New Roman',
                                               size=20,
                                               color='black'),
                                     bgcolor='rgb(103,169,207)',
@@ -304,7 +304,7 @@ if page == 'Single':
                                     showarrow= False,
                                     xref='paper',
                                     yref='paper',
-                                    font=dict(family='Arial',
+                                    font=dict(family='Times New Roman',
                                               size=20,
                                               color='black'),
                                     bgcolor='rgb(253,208,162)',
@@ -317,7 +317,7 @@ if page == 'Single':
                                          linewidth=2,
                                          ticks='outside',
                                          tickfont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size=20,
                                              color='black'),
                                          row=1, col=1)
@@ -325,13 +325,13 @@ if page == 'Single':
                                          showgrid=False,
                                          linecolor='black',
                                          titlefont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size = 25,
                                             color= 'black'),
                                          linewidth=2,
                                          ticks='outside',
                                          tickfont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size=20,
                                              color='black'),
                                          row=2, col=1)
@@ -339,13 +339,13 @@ if page == 'Single':
                                          showgrid=False,
                                          linecolor='black',
                                          titlefont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size = 25,
                                             color= 'black'),
                                          linewidth=2,
                                          ticks='outside',
                                          tickfont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size=20,
                                              color='black'),
                                          row=1, col=1)
@@ -353,13 +353,13 @@ if page == 'Single':
                                          showgrid=False,
                                          linecolor='black',
                                          titlefont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size = 25,
                                             color= 'black'),
                                          linewidth=2,
                                          ticks='outside',
                                          tickfont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size=20,
                                              color='black'),
                                          row=2, col=1)
@@ -367,7 +367,7 @@ if page == 'Single':
                         
                         fig.update_layout(height=1200, width=1000,
                                           font=dict(
-                                              family="Arial",
+                                              family="Times New Roman",
                                               size=30,
                                               color="Black"),
                                           showlegend=True,
@@ -378,7 +378,7 @@ if page == 'Single':
                                              xanchor="right",
                                              x=1,
                                              title_font_family="Times New Roman",
-                                             font=dict(family="Arial",
+                                             font=dict(family="Times New Roman",
                                              size=25,
                                              color="black")))   
                         fig.update_layout(legend= {'itemsizing': 'constant'})
@@ -483,7 +483,7 @@ if page == 'Single':
                         fig.update_layout(barmode='stack',
                                           
                                           font=dict(
-                             family="Arial",
+                             family="Times New Roman",
                              size=25,
                              color="Black"),
                                 xaxis=dict(
@@ -493,19 +493,19 @@ if page == 'Single':
                              linecolor='black',
                              title='Cost (USD)',
                              titlefont=dict(
-                                 family='Arial',
+                                 family='Times New Roman',
                                  size = 25,
                                  color= 'black'),
                              linewidth=2,
                              ticks='outside',
                              tickfont=dict(
-                                 family='Arial',
+                                 family='Times New Roman',
                                  size=20,
                                  color='black',
                                  )),yaxis=dict(
                                      
                                      titlefont=dict(
-                                 family='Arial',
+                                 family='Times New Roman',
                                  size = 25,
                                  color= 'black'),
                                      showline=False,
@@ -515,7 +515,7 @@ if page == 'Single':
                                      linewidth=2,
                                      ticks='outside',
                                      tickfont=dict(
-                                         family='Arial',
+                                         family='Times New Roman',
                                          size=20,
                                          color='black',
                                          )),
@@ -526,8 +526,8 @@ if page == 'Single':
                                         y=1,
                                         xanchor="right",
                                         x=0.8,
-                                        title_font_family="Arial",
-                                        font=dict(family="Arial",
+                                        title_font_family="Times New Roman",
+                                        font=dict(family="Times New Roman",
                                         size=25,
                                         color="black")))
                         st.plotly_chart(fig, use_container_width=True)
@@ -542,7 +542,7 @@ if page == 'Single':
                                     showarrow= False,
                                     xref='paper',
                                     yref='paper',
-                                    font=dict(family='Arial',
+                                    font=dict(family='Times New Roman',
                                               size=20,
                                               color='black'),
                                     bgcolor=None,
@@ -636,7 +636,7 @@ if page == 'Single':
                                    showarrow= False,
                                    xref='paper',
                                    yref='paper',
-                                   font=dict(family='Arial',
+                                   font=dict(family='Times New Roman',
                                              size=20,
                                              color='black'),
                                    bgcolor='rgb(103,169,207)',
@@ -649,7 +649,7 @@ if page == 'Single':
                                    showarrow= False,
                                    xref='paper',
                                    yref='paper',
-                                   font=dict(family='Arial',
+                                   font=dict(family='Times New Roman',
                                              size=20,
                                              color='black'),
                                    bgcolor='rgb(253,208,162)',
@@ -662,7 +662,7 @@ if page == 'Single':
                                         linewidth=2,
                                         ticks='outside',
                                         tickfont=dict(
-                                            family='Arial',
+                                            family='Times New Roman',
                                             size=20,
                                             color='black'),
                                         row=1, col=1)
@@ -670,13 +670,13 @@ if page == 'Single':
                                         showgrid=False,
                                         linecolor='black',
                                         titlefont=dict(
-                                            family='Arial',
+                                            family='Times New Roman',
                                             size = 25,
                                            color= 'black'),
                                         linewidth=2,
                                         ticks='outside',
                                         tickfont=dict(
-                                            family='Arial',
+                                            family='Times New Roman',
                                             size=20,
                                             color='black'),
                                         row=2, col=1)
@@ -684,13 +684,13 @@ if page == 'Single':
                                         showgrid=False,
                                         linecolor='black',
                                         titlefont=dict(
-                                            family='Arial',
+                                            family='Times New Roman',
                                             size = 25,
                                            color= 'black'),
                                         linewidth=2,
                                         ticks='outside',
                                         tickfont=dict(
-                                            family='Arial',
+                                            family='Times New Roman',
                                             size=20,
                                             color='black'),
                                         row=1, col=1)
@@ -698,13 +698,13 @@ if page == 'Single':
                                         showgrid=False,
                                         linecolor='black',
                                         titlefont=dict(
-                                            family='Arial',
+                                            family='Times New Roman',
                                             size = 25,
                                            color= 'black'),
                                         linewidth=2,
                                         ticks='outside',
                                         tickfont=dict(
-                                            family='Arial',
+                                            family='Times New Roman',
                                             size=20,
                                             color='black'),
                                         row=2, col=1)
@@ -712,7 +712,7 @@ if page == 'Single':
                        
                        fig.update_layout(height=1200, width=1000,
                                          font=dict(
-                                             family="Arial",
+                                             family="Times New Roman",
                                              size=30,
                                              color="Black"),
                                          showlegend=True,
@@ -723,7 +723,7 @@ if page == 'Single':
                                             xanchor="right",
                                             x=1,
                                             title_font_family="Times New Roman",
-                                            font=dict(family="Arial",
+                                            font=dict(family="Times New Roman",
                                             size=25,
                                             color="black")))   
                        fig.update_layout(legend= {'itemsizing': 'constant'})
@@ -828,7 +828,7 @@ if page == 'Single':
                        fig.update_layout(barmode='stack',
                                          
                                          font=dict(
-                            family="Arial",
+                            family="Times New Roman",
                             size=25,
                             color="Black"),
                                xaxis=dict(
@@ -838,19 +838,19 @@ if page == 'Single':
                             linecolor='black',
                             title='Cost (USD)',
                             titlefont=dict(
-                                family='Arial',
+                                family='Times New Roman',
                                 size = 25,
                                 color= 'black'),
                             linewidth=2,
                             ticks='outside',
                             tickfont=dict(
-                                family='Arial',
+                                family='Times New Roman',
                                 size=20,
                                 color='black',
                                 )),yaxis=dict(
                                     
                                     titlefont=dict(
-                                family='Arial',
+                                family='Times New Roman',
                                 size = 25,
                                 color= 'black'),
                                     showline=False,
@@ -860,7 +860,7 @@ if page == 'Single':
                                     linewidth=2,
                                     ticks='outside',
                                     tickfont=dict(
-                                        family='Arial',
+                                        family='Times New Roman',
                                         size=20,
                                         color='black',
                                         )),
@@ -871,8 +871,8 @@ if page == 'Single':
                                        y=1,
                                        xanchor="right",
                                        x=0.8,
-                                       title_font_family="Arial",
-                                       font=dict(family="Arial",
+                                       title_font_family="Times New Roman",
+                                       font=dict(family="Times New Roman",
                                        size=25,
                                        color="black")))
                        st.plotly_chart(fig, use_container_width=True)
@@ -887,7 +887,7 @@ if page == 'Single':
                                    showarrow= False,
                                    xref='paper',
                                    yref='paper',
-                                   font=dict(family='Arial',
+                                   font=dict(family='Times New Roman',
                                              size=20,
                                              color='black'),
                                    bgcolor=None,
@@ -979,7 +979,7 @@ if page == 'Single':
                                     showarrow= False,
                                     xref='paper',
                                     yref='paper',
-                                    font=dict(family='Arial',
+                                    font=dict(family='Times New Roman',
                                               size=20,
                                               color='black'),
                                     bgcolor='rgb(103,169,207)',
@@ -992,7 +992,7 @@ if page == 'Single':
                                     showarrow= False,
                                     xref='paper',
                                     yref='paper',
-                                    font=dict(family='Arial',
+                                    font=dict(family='Times New Roman',
                                               size=20,
                                               color='black'),
                                     bgcolor='rgb(253,208,162)',
@@ -1005,7 +1005,7 @@ if page == 'Single':
                                          linewidth=2,
                                          ticks='outside',
                                          tickfont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size=20,
                                              color='black'),
                                          row=1, col=1)
@@ -1013,13 +1013,13 @@ if page == 'Single':
                                          showgrid=False,
                                          linecolor='black',
                                          titlefont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size = 25,
                                             color= 'black'),
                                          linewidth=2,
                                          ticks='outside',
                                          tickfont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size=20,
                                              color='black'),
                                          row=2, col=1)
@@ -1027,13 +1027,13 @@ if page == 'Single':
                                          showgrid=False,
                                          linecolor='black',
                                          titlefont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size = 25,
                                             color= 'black'),
                                          linewidth=2,
                                          ticks='outside',
                                          tickfont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size=20,
                                              color='black'),
                                          row=1, col=1)
@@ -1041,13 +1041,13 @@ if page == 'Single':
                                          showgrid=False,
                                          linecolor='black',
                                          titlefont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size = 25,
                                             color= 'black'),
                                          linewidth=2,
                                          ticks='outside',
                                          tickfont=dict(
-                                             family='Arial',
+                                             family='Times New Roman',
                                              size=20,
                                              color='black'),
                                          row=2, col=1)
@@ -1055,7 +1055,7 @@ if page == 'Single':
                         
                         fig.update_layout(height=1200, width=1000,
                                           font=dict(
-                                              family="Arial",
+                                              family="Times New Roman",
                                               size=30,
                                               color="Black"),
                                           showlegend=True,
@@ -1066,7 +1066,7 @@ if page == 'Single':
                                              xanchor="right",
                                              x=1,
                                              title_font_family="Times New Roman",
-                                             font=dict(family="Arial",
+                                             font=dict(family="Times New Roman",
                                              size=25,
                                              color="black")))   
                         fig.update_layout(legend= {'itemsizing': 'constant'})
@@ -1171,7 +1171,7 @@ if page == 'Single':
                         fig.update_layout(barmode='stack',
                                           
                                           font=dict(
-                             family="Arial",
+                             family="Times New Roman",
                              size=25,
                              color="Black"),
                                 xaxis=dict(
@@ -1181,19 +1181,19 @@ if page == 'Single':
                              linecolor='black',
                              title='Cost (USD)',
                              titlefont=dict(
-                                 family='Arial',
+                                 family='Times New Roman',
                                  size = 25,
                                  color= 'black'),
                              linewidth=2,
                              ticks='outside',
                              tickfont=dict(
-                                 family='Arial',
+                                 family='Times New Roman',
                                  size=20,
                                  color='black',
                                  )),yaxis=dict(
                                      
                                      titlefont=dict(
-                                 family='Arial',
+                                 family='Times New Roman',
                                  size = 25,
                                  color= 'black'),
                                      showline=False,
@@ -1203,7 +1203,7 @@ if page == 'Single':
                                      linewidth=2,
                                      ticks='outside',
                                      tickfont=dict(
-                                         family='Arial',
+                                         family='Times New Roman',
                                          size=20,
                                          color='black',
                                          )),
@@ -1214,8 +1214,8 @@ if page == 'Single':
                                         y=1,
                                         xanchor="right",
                                         x=0.8,
-                                        title_font_family="Arial",
-                                        font=dict(family="Arial",
+                                        title_font_family="Times New Roman",
+                                        font=dict(family="Times New Roman",
                                         size=25,
                                         color="black")))
                         st.plotly_chart(fig, use_container_width=True)
@@ -1230,7 +1230,7 @@ if page == 'Single':
                                     showarrow= False,
                                     xref='paper',
                                     yref='paper',
-                                    font=dict(family='Arial',
+                                    font=dict(family='Times New Roman',
                                               size=20,
                                               color='black'),
                                     bgcolor=None,
@@ -1238,3 +1238,4 @@ if page == 'Single':
                                     x=0.07,
                                     xanchor='left')
                         st.plotly_chart(fig1, use_container_width=True)
+
